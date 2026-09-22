@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="求职流程进度看板" />
+    <title>求职进度看板</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">CAREER PIPELINE</p>
+          <h1>求职进度看板</h1>
+          <p class="hero-copy">集中查看每一次投递，让下一步一目了然。</p>
+        </div>
+        <div class="summary" aria-label="记录汇总">
+          <span>进行中的机会</span>
+          <strong id="active-count">0</strong>
+        </div>
+      </header>
+
+      <section class="content-grid" aria-label="求职流程与记录详情">
+        <section class="pipeline-panel" aria-labelledby="pipeline-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">APPLICATION JOURNEY</p>
+              <h2 id="pipeline-title">招聘流程</h2>
+            </div>
+            <p class="hint">选择任意卡片查看详情</p>
+          </div>
+          <div id="pipeline" class="pipeline" aria-label="招聘流程节点"></div>
+        </section>
+
+        <aside class="detail-panel" aria-labelledby="detail-title">
+          <p class="section-kicker">APPLICATION DETAIL</p>
+          <h2 id="detail-title">记录详情</h2>
+          <div id="detail-content" class="detail-content" aria-live="polite"></div>
+        </aside>
+      </section>
+    </main>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
